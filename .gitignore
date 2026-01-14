@@ -1,0 +1,97 @@
+####################################
+# Build results
+####################################
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+####################################
+# Visual Studio / IDE
+####################################
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+####################################
+# Rider / VS Code
+####################################
+.vscode/
+*.code-workspace
+
+####################################
+# MAUI / Xamarin / Platform outputs
+####################################
+**/Platforms/**/bin/
+**/Platforms/**/obj/
+**/Platforms/**/Generated/
+
+####################################
+# Android
+####################################
+*.apk
+*.aab
+*.keystore
+*.jks
+
+####################################
+# iOS / MacCatalyst
+####################################
+*.app
+*.ipa
+*.dSYM/
+*.xcworkspace
+*.xcuserstate
+*.mobileprovision
+
+####################################
+# Windows / WinUI
+####################################
+AppPackages/
+BundleArtifacts/
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+
+####################################
+# Logs & temp
+####################################
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+####################################
+# OS generated
+####################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+####################################
+# Environment / secrets
+####################################
+.env
+.env.*
+secrets.json
+appsettings.Development.json
+
+####################################
+# Database / local storage (LiteDB, SQLite, etc)
+####################################
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+####################################
+# NuGet
+####################################
+packages/
+.nuget/

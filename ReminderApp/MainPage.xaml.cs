@@ -2,38 +2,36 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
+        public int attemptlogin = 0;
         public MainPage()
         {
             InitializeComponent();
         }
-
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnSubmitClicked(object sender, EventArgs e)
         {
-            count++;
+            var username = UsernameEntry.Text;
+            var password = PasswordEntry.Text;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            var error = ValidateLogin(UsernameEntry.Text, PasswordEntry.Text);
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            if (error != null)
+            {
+                await DisplayAlert("Warning", error, "OK");
+                return;
+            }
         }
 
-        void InputUsername(object sender, TextChangedEventArgs e)
+        private string? ValidateLogin(string? username, string? password)
         {
-            string oldText = e.OldTextValue;
-            string newText = e.NewTextValue;
-            string myText = UsernameEntry.Text;
+            if (string.IsNullOrWhiteSpace(username))
+                return "Username wajib diisi";
+
+            if (string.IsNullOrWhiteSpace(password))
+                return "Password wajib diisi";
+
+            return null;
         }
 
-        void InputUsernameDone (object sender, EventArgs e)
-        {
-            string text = ((Entry)sender).Text;
-            OutputUsername.Text = text;
-            SemanticScreenReader.Announce(OutputUsername.Text);
-        }
     }
 
 }

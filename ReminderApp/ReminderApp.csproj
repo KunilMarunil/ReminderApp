@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="HomePage.xaml~RF53d81a8.TMP" />
 	  <None Remove="Resources\Fonts\Satoshi-Variable.ttf" />
 	</ItemGroup>
 
@@ -69,6 +70,18 @@
 	<ItemGroup>
 	  <Folder Include="Controllers\" />
 	  <Folder Include="Views\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="LoginPage.xaml.cs">
+	    <DependentUpon>LoginPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

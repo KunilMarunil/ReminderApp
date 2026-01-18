@@ -1,9 +1,8 @@
 ﻿namespace ReminderApp
 {
-    public partial class MainPage : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        public int attemptlogin = 0;
-        public MainPage()
+        public LoginPage()
         {
             InitializeComponent();
         }
@@ -16,18 +15,29 @@
 
             if (error != null)
             {
-                await DisplayAlert("Warning", error, "OK");
+                await DisplayAlert("Liat Woi", error, "Ok");
                 return;
             }
-        }
 
+            await this.TranslateTo(-this.Width, 0, 220, Easing.CubicInOut);
+
+            Application.Current.MainPage = new AppShell();
+
+            this.TranslationX = 0;
+        }
         private string? ValidateLogin(string? username, string? password)
         {
+            if (string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password))
+                return "Anda bodoh ya?";
+
             if (string.IsNullOrWhiteSpace(username))
                 return "Username wajib diisi";
 
             if (string.IsNullOrWhiteSpace(password))
                 return "Password wajib diisi";
+
+            if (username == "admin" && password == "admin")
+                return "Anda bukan Admin";
 
             return null;
         }

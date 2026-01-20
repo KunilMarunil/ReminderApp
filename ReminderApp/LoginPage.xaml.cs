@@ -16,6 +16,8 @@
             if (error != null)
             {
                 await DisplayAlert("Error", error, "Ok");
+                UsernameEntry.Text = "";
+                PasswordEntry.Text = "";
                 return;
             }
 
@@ -31,7 +33,7 @@
         private string? ValidateLogin(string? username, string? password)
         {
             if (string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password))
-                return "Anda bodoh ya?";
+                return "Lu bodoh ya?";
 
             if (string.IsNullOrWhiteSpace(username))
                 return "Username wajib diisi";
@@ -41,6 +43,9 @@
 
             if (password != "kambing")
                 return "Password salah, coba lagi";
+
+            if (username != "Rama")
+                return "Lu siapa dah?";
             return null;
         }
     }

@@ -17,6 +17,7 @@
             WidthRequest="24"
             HeightRequest="24"
             BackgroundColor="Transparent"
+            Clicked="OnGoToMenu"
             Grid.Column="0"/>
 
             <Label
@@ -38,11 +39,18 @@
 
         </Grid>
         <ScrollView>
-            <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            Padding="15"/>
+            <VerticalStackLayout Padding="5" Spacing="10">
+                <Label 
+                Text="Welcome to .NET MAUI!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Padding="5"/>
+                <Label 
+                Text="Looks cool right?"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Padding="5"/>  
+            </VerticalStackLayout>
         </ScrollView>
     </VerticalStackLayout>
 </ContentPage>

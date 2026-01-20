@@ -22,6 +22,10 @@ public partial class HomePage : ContentPage
     {
         Application.Current.MainPage = new LoginPage();
     }
+    private void OnGoToMenu(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new MenuPage();
+    }
     protected override async void OnAppearing()
     {
         base.OnAppearing();

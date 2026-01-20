@@ -70,6 +70,9 @@
 
 	<ItemGroup>
 	  <Folder Include="Controllers\" />
+	  <Folder Include="Datas\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Services\" />
 	  <Folder Include="Views\" />
 	</ItemGroup>
 
@@ -81,6 +84,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MenuPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

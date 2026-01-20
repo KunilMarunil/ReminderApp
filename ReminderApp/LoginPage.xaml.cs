@@ -15,13 +15,16 @@
 
             if (error != null)
             {
-                await DisplayAlert("Liat Woi", error, "Ok");
+                await DisplayAlert("Error", error, "Ok");
                 return;
             }
 
             await this.TranslateTo(-this.Width, 0, 220, Easing.CubicInOut);
 
             Application.Current.MainPage = new AppShell();
+
+            await Shell.Current.GoToAsync(
+                $"{nameof(HomePage)}?username={Uri.EscapeDataString(username)}");
 
             this.TranslationX = 0;
         }
@@ -36,12 +39,9 @@
             if (string.IsNullOrWhiteSpace(password))
                 return "Password wajib diisi";
 
-            if (username == "admin" && password == "admin")
-                return "Anda bukan Admin";
-
+            if (password != "kambing")
+                return "Password salah, coba lagi";
             return null;
         }
-
     }
-
 }

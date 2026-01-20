@@ -2,18 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ReminderApp.LoginPage"
-             Shell.NavBarIsVisible="False">
-
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Gray100}">
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
+            Padding="30,40"
             Spacing="25"
             VerticalOptions="Center">
             <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
+                Source="logo.png"
+                HeightRequest="200"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                />
             <Entry
                 x:Name="UsernameEntry"
                 Placeholder="Username"
@@ -24,9 +24,13 @@
                 IsPassword="True"
                 />
             <Button
-                x:Name="CounterBtn"
+                x:Name="SubmitBtn"
                 Text="Submit"
                 Clicked="OnSubmitClicked"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="{StaticResource White}"
+                CornerRadius="12"
+                HeightRequest="48"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>

@@ -6,4 +6,8 @@ public partial class MenuPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private async void OnReminderClicked(object sender, TappedEventArgs e)
+    {
+        Application.Current.MainPage = new ReminderPage();
+    }
 }

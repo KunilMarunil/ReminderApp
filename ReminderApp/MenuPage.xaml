@@ -3,10 +3,146 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ReminderApp.MenuPage"
              Title="MenuPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome Menu Page!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+    <VerticalStackLayout Spacing="12">
+        
+        <!-- Main -->
+        <Label
+                Text="Main"
+                FontSize="16"
+                FontAttributes="Bold"
+                TextColor="Black" 
+                Padding="20,20,20,0" />
+
+        <BoxView HeightRequest="1"
+                        Color="#E0E0E0" />
+
+        <!-- Main Item -->
+        <Grid Padding="20,0,20,0"
+          ColumnDefinitions="*,Auto">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnReminderClicked"/>
+            </Grid.GestureRecognizers>
+
+            <Label Text="Reminder"
+               FontSize="14"
+               TextColor="Black"
+               Grid.Column="0"/>
+
+            <Label Text="›"
+               FontSize="14"
+               TextColor="Gray"
+               Grid.Column="1"/>
+        </Grid>
+        
+        <!-- Account -->
+        <Label
+        Text="Account"
+        FontSize="16"
+        FontAttributes="Bold"
+        TextColor="Black" 
+        Padding="20,20,20,0" />
+
+        <BoxView HeightRequest="1"
+                Color="#E0E0E0" />
+
+        <!-- Account Item -->
+        <Grid Padding="20,0,20,0"
+          ColumnDefinitions="*,Auto">
+            <Grid.GestureRecognizers>
+                <!--<TapGestureRecognizer Tapped="OnAkunTapped"/>-->
+            </Grid.GestureRecognizers>
+
+            <Label Text="Account"
+               FontSize="14"
+               TextColor="Black"
+               Grid.Column="0"/>
+
+            <Label Text="›"
+               FontSize="14"
+               TextColor="Gray"
+               Grid.Column="1"/>
+        </Grid>
+
+        <Grid Padding="20,0,20,0"
+          ColumnDefinitions="*,Auto">
+            <Grid.GestureRecognizers>
+                <!--<TapGestureRecognizer Tapped="OnAkunTapped"/>-->
+            </Grid.GestureRecognizers>
+
+            <Label Text="Preferences"
+               FontSize="14"
+               TextColor="Black"
+               Grid.Column="0"/>
+
+            <Label Text="›"
+               FontSize="14"
+               TextColor="Gray"
+               Grid.Column="1"/>
+        </Grid>
+
+        <!-- Settings -->
+        <Label
+        Text="Settings"
+        FontSize="16"
+        FontAttributes="Bold"
+        TextColor="Black" 
+        Padding="20,20,20,0" />
+
+        <BoxView HeightRequest="1"
+                Color="#E0E0E0" />
+
+        <!-- Settings Item -->
+        <Grid Padding="20,0,20,0"
+          ColumnDefinitions="*,Auto">
+            <Grid.GestureRecognizers>
+                <!--<TapGestureRecognizer Tapped="OnAkunTapped"/>-->
+            </Grid.GestureRecognizers>
+
+            <Label Text="Notification"
+               FontSize="14"
+               TextColor="Black"
+               Grid.Column="0"/>
+
+            <Label Text="›"
+               FontSize="14"
+               TextColor="Gray"
+               Grid.Column="1"/>
+        </Grid>
+
+        <Grid Padding="20,0,20,0"
+          ColumnDefinitions="*,Auto">
+            <Grid.GestureRecognizers>
+                <!--<TapGestureRecognizer Tapped="OnAkunTapped"/>-->
+            </Grid.GestureRecognizers>
+
+            <Label Text="Theme"
+               FontSize="14"
+               TextColor="Black"
+               Grid.Column="0"/>
+
+            <Label Text="›"
+               FontSize="14"
+               TextColor="Gray"
+               Grid.Column="1"/>
+        </Grid>
+
+        <Grid Padding="20,0,20,0"
+          ColumnDefinitions="*,Auto">
+            <Grid.GestureRecognizers>
+                <!--<TapGestureRecognizer Tapped="OnAkunTapped"/>-->
+            </Grid.GestureRecognizers>
+
+            <Label Text="About"
+               FontSize="14"
+               TextColor="Black"
+               Grid.Column="0"/>
+
+            <Label Text="›"
+               FontSize="14"
+               TextColor="Gray"
+               Grid.Column="1"/>
+        </Grid>
+
     </VerticalStackLayout>
 </ContentPage>
